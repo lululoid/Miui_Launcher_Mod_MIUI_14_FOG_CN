@@ -6,7 +6,7 @@ MIUI Launcher App modified by [Kashi](https://t.me/kakashi1v1) with many feature
 
 ### Prerequisites
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
-- MIUI 12-13 based ROMs with Android 10 or higher
+- MIUI 12-14 based ROMs with Android 10 or higher
 
 ### Changelog
 - New user interface
@@ -20,8 +20,8 @@ MIUI Launcher App modified by [Kashi](https://t.me/kakashi1v1) with many feature
 - More ...........
 
 ### Notes
-- Tested on Global/Cn/Eu ROMs based on MIUI 13 - Android 12
-- Miui 14 Cn users need to install core patch lsposed and extract apk to install, Eu users can flash the module simply
+- Tested on Global/Cn/Eu ROMs based on MIUI 13 and MIUI 14 and CN too - Android 12
+- Miui 14 CN users need to install core patch lsposed Eu users can flash the module simply
 - If you use this Launcher on your custom rom don't forget to give credits for the effort
 - For issues or questions you can send a message in [Telegram](https://t.me/amogus_discussion) group.
 
