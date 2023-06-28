@@ -35,12 +35,14 @@ install_files() {
     ui_print "  Vol- = MIUI 14 Android 13 Xiaomi.eu based"
 
     if chooseport; then
+        pm uninstall-system-updates com.miui.home
+
 		install_error=$(pm install "$MODPATH/files/launcher/MiuiHome.apk" 2>&1 >/dev/null)
 
 		if [ -n "$install_error" ]; then
 			abort "> Installation aborted. Please Disable signature verification"
 		fi
-        ui_print "> MIUI 14 CN selected "
+        ui_print "> MIUI launcher mod installed"
         mv "$MODPATH/files/launcher/MiuiHome.apk" "$MODPATH$launcher"
     else
         {

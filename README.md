@@ -4,6 +4,8 @@
 
 MIUI Launcher App modified by [Kashi](https://t.me/kakashi1v1) with many features added and ui changes.
 
+This module forked from the original and modified, this module intended for CN version, tell me if something goes wrong.
+
 ### Prerequisites
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
 - MIUI 12-14 based ROMs with Android 10 or higher
