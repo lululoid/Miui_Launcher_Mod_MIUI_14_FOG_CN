@@ -23,7 +23,7 @@ This module forked from the original and modified, this module intended for CN v
 - For issues or questions, you can send a message to the [Telegram](https://t.me/amogus_discussion) group.
 
 ### Download
-- Download from [releases page](https://github.com/Mods-Center/Miui_Launcher_Mod/releases)
+- Download --> [MIUI-Launcher-MOD-V3-MIUI14-CN-support.zip](https://github.com/lululoid/Miui_Launcher_Mod_MIUI_14_FOG_CN/blob/main/MIUI-Launcher-MOD-V3-MIUI14-CN-support.zip)
 
 ### Instructions
 - Download the zip file and flash it in Magisk.
