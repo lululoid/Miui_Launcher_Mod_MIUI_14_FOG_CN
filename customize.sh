@@ -3,6 +3,19 @@ SKIPUNZIP=1
 SKIPMOUNT=false
 android=$(getprop ro.build.version.release)
 
+ui_print "             Delivered with ❤ by "
+sleep 0.5
+ui_print " █▀▀ █▀▀█ █░░░█ ░▀░ █▀▀▄ ▀▀█ █▀▀ █▀▀█ █▀▀█"
+ui_print " █▀▀ █▄▄▀ █▄█▄█ ▀█▀ █░░█ ▄▀░ █▀▀ █▄▄▀ █▄▀█"
+ui_print " ▀▀▀ ▀░▀▀ ░▀░▀░ ▀▀▀ ▀░░▀ ▀▀▀ ▀▀▀ ▀░▀▀ █▄▄█"
+ui_print " ==================:)====================="
+sleep 0.5
+
+log_it() {
+	log=$(echo "$*" | tr -s " ")
+	false && ui_print "  DEBUG: $log"
+}
+
 _ui_print() {
 	ui_print ""
 	ui_print "$*"
@@ -26,6 +39,8 @@ install_files() {
 		launcher=$(find "$dir" -type f -iname "*miuihome*")
 		launcher_dir=$(find "$dir" -type d -iname "*miuihome*")
 
+		log_it "launcher: $launcher"
+		log_it "launcher_dir: $launcher_dir"
 		mkdir -p "$MODPATH$launcher_dir"
 	done
 
@@ -55,21 +70,21 @@ install_files() {
 	# installation
 	if chooseport; then
 		ui_print "> Uninstalling launcher updates.."
-		pm uninstall-system-updates com.miui.home 1>/dev/null &&
-			ui_print " Launcher updates uninstalled"
+		pm uninstall-system-updates com.miui.home 1>/dev/null && ui_print " Launcher updates uninstalled"
 
-		install_success=$(pm install "$MODPATH/files/launcher/MiuiHome.apk" >/dev/null)
+		installation=$(pm install "$MODPATH"/files/launcher/MiuiHome.apk)
+		log_it "installation=$(pm install "$MODPATH"/files/launcher/MiuiHome.apk)"
+		log_it "$(ls "$MODPATH"/files/launcher/)"
 
-		[ ! "$install_success" ] && {
+		[[ "$installation" != "Success" ]] &&
 			abort "> Please Disable signature verification"
-		}
 
-		mv "$MODPATH/files/launcher/MiuiHome.apk" "$MODPATH$launcher"
+		mv "$MODPATH"/files/launcher/MiuiHome.apk "$MODPATH$launcher"
 	else
-		mv "$MODPATH/files/launcher/MiuiHome.apk" "$MODPATH$launcher"
+		mv "$MODPATH"/files/launcher/MiuiHome.apk "$MODPATH$launcher"
 	fi
 
-	if [ "$install_success" ]; then
+	if [ "$installation" = "Success" ]; then
 		ui_print "> Miui launcher installation success, no need to reboot"
 	else
 		ui_print "> MIUI launcher mod installed but please reboot first"
@@ -84,9 +99,9 @@ install_files() {
 }
 
 set_monet() {
-	. $MODPATH/addon/install.sh
+	. "$MODPATH"/addon/install.sh
 
-	[ $android -gt 11 ] && {
+	[ "$android" -gt 11 ] && {
 		ui_print " Do you want Monet colors?"
 		ui_print "  Vol+ = Yes"
 		ui_print "  Vol- = No"
@@ -122,9 +137,9 @@ cleanup() {
 run_install() {
 	unzip -o "$ZIPFILE" -x 'META-INF/*' -d "$MODPATH" >&2
 	ui_print "> Installing files"
+	set_permissions
 	install_files
 	set_monet
-	set_permissions
 	sleep 1
 	ui_print "> Cleaning up"
 	cleanup
