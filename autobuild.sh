@@ -1,15 +1,15 @@
 #!/usr/bin/bash
-
-# Check for the Distro Type
+# Check for the package manager to use
 
 apps=(zip figlet)
 rapps=()
+# pkg should be first to anticipate termux
 p_managers=( "pkg" "apt" "yum" "dnf" "pacman" "zypper")
 
 for app in "${apps[@]}"; do
-	rapp=$(which "$app")
+  rapp=$(command -v "$app" >/dev/null || which "$app" >/dev/null )
 
-	if [ -z "$rapp" ]; then
+	if [ -n "$rapp" ]; then
 		rapps+=("$app")
 	fi
 done
@@ -26,14 +26,13 @@ if [ "$rapps" ]; then
 			$pm install "${rapps[@]}"
 			break
 		elif $is_installed; then
-			# Install zip and figlet package using pkg
 			sudo "$pm" install "${rapps[@]}"
 			break
 		fi
 	done
 fi
 
-# Display "Lawnchair Magisk" in bigger fonts
+# It's figlet time
 figlet "MIUI Launcher MOD"
 
 # Delete already exists module zip
@@ -47,8 +46,7 @@ fi
 
 version=$1
 versionCode=$2
-
-# Read version and versionCode from module.prop
+# Read version and versionCode from module.prop and automatically update module.prop
 if [ -z "$version" ]; then
     version=$(sed -n 's/version=\(.*\)/\1/p' module.prop)
 fi
@@ -58,15 +56,12 @@ if [ -z "$versionCode" ]; then
     versionCode=$((versionCode + 1))
 fi
 
-# Automatically update module.prop
 sed -i "s/version=.*/version=$version/; s/versionCode=[0-9]*/versionCode=$versionCode/g" module.prop
 
 # Create zip file
 echo "> Creating zip file"
-echo ""
-zip_name="MIUI-Launcher-MOD-$version"                         # make the output look easier to read
-rm -rf "$zip_name.zip"
+zip_name="MIUI-Launcher-MOD-$version" 
+rm -rf "$zip_name.zip"                # remove previous module
 zip -r -q "$zip_name.zip" . -x .git/\* autobuild.sh README.md # Ignore specified files and folders because they are not needed for the module
-echo ""                                                       # make the output look easier to read
 echo "> Done! You can find the module zip file in the current directory - '$(pwd)/$zip_name.zip'"
 
