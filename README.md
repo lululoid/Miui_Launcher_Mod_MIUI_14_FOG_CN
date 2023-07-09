@@ -1,37 +1,32 @@
 # Modded MIUI Launcher
- 
-![Picsart_22-12-14_07-47-34-971](https://telegra.ph/file/72c57aba7fc39d95a1e27.png)
 
-MIUI Launcher App modified by [Kashi](https://t.me/kakashi1v1) with many features added and ui changes.
+![Picsart_22-12-14_07-47-34-971](https://telegra.ph/file/479d8c1d24c2b5f2c7168.png)
 
-This module forked from the original and modified, this module intended for CN version, tell me if something goes wrong.
+MIUI Launcher App modified by [Kashi](https://t.me/kakashi1v1) with added features and UI changes.
+This module forked from the original and modified, this module intended for CN version but also probably work for other mentioned in owner repo too, tell me if something goes wrong.
 
 ### Prerequisites
-- Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
-- MIUI 12-14 based ROMs with Android 10 or higher
+- Rooted device using [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
+- MIUI 13-14 based ROMs with Android 11 or higher.
 
 ### Changelog
-- New user interface
-- Changes in user interface
-- Implemented more functions
-- Can choose between iOS and Default for recent tasks
-- Folder size unlocked for versions lower than MIUI 14
-- Monet enabled
-- Fixed loading screen for lots of users
-- Blur folder bug fix and rounded folder for roms below than A12
-- More ...........
+- Patch v3
+- New UI interface.
+- Added several new modifications.
+- Fixed all bugs noticed in the previous update.
 
 ### Notes
-- Tested on Global/Cn/Eu ROMs based on MIUI 13 and MIUI 14 and CN too - Android 12
-- Miui 14 CN users need to install core patch lsposed Eu users can flash the module simply
-- If you use this Launcher on your custom rom don't forget to give credits for the effort
-- For issues or questions you can send a message in [Telegram](https://t.me/amogus_discussion) group.
+- Tested on Global/CN/EU ROMs based on MIUI 13 - Android 12 and higher.
+- Users with Global/CN ROMs based on Android 13 are required to disable signature verification, and it is recommended to use Core Patch LSPosed module.
+- If you use this in your ROM, please remember to credit our work.
+- Not for paid ROMs, absolute freedom idealist.
+- For issues or questions, you can send a message to the [Telegram](https://t.me/amogus_discussion) group.
 
 ### Download
 - Download from [releases page](https://github.com/Mods-Center/Miui_Launcher_Mod/releases)
 
 ### Instructions
-- Download zip and flash in Magisk
+- Download the zip file and flash it in Magisk.
 - Reboot your device
 - Enjoy!
 
@@ -88,12 +83,12 @@ git pull
 ```
 
 ### Screenshots ###
-![photo_2022-12-16_21-10-41](https://telegra.ph/file/171a778ecc6d9ecb0d92a.png)
-![photo_2022-12-16_21-10-37](https://telegra.ph/file/83ab4240b157089f7ac9c.png)
-![photo_2022-12-16_21-10-31](https://telegra.ph/file/a7eeca73de1fc547fd5b5.png)
-![photo_2022-12-16_21-10-53](https://telegra.ph/file/4747a85c7f22a5c0f76dd.png)
-![photo_2022-12-16_21-10-49](https://telegra.ph/file/ae49add564eba33723a62.png)
-![photo_2022-12-16_21-10-45](https://telegra.ph/file/a151a94a9b55e23725a20.png)
+![photo_2022-12-16_21-10-41](https://telegra.ph/file/f3785e7c0a9635e1cdfd7.png)
+![photo_2022-12-16_21-10-37](https://telegra.ph/file/a1aad969d4acfc91b349f.png)
+![photo_2022-12-16_21-10-31](https://telegra.ph/file/3437550f579f607362b24.png)
+![photo_2022-12-16_21-10-53](https://telegra.ph/file/c94b2230c329bc8ed9ccc.png)
+![photo_2022-12-16_21-10-49](https://telegra.ph/file/49c03d4f92af0e105022e.png)
+![photo_2022-12-16_21-10-45](https://telegra.ph/file/e4a55ea339eb6249efbb7.png)
 
 | Download Mods | Total |
 | --- | --- |
