@@ -62,6 +62,11 @@ sed -i "s/version=.*/version=$version/; s/versionCode=[0-9]*/versionCode=$versio
 echo "> Creating zip file"
 zip_name="MIUI-Launcher-MOD-$version" 
 rm -rf "$zip_name.zip"                # remove previous module
-zip -r -q "$zip_name.zip" . -x .git/\* autobuild.sh README.md # Ignore specified files and folders because they are not needed for the module
+# Ignore specified files and folders because they are not needed for the module
+zip -r -q "$zip_name.zip" . \
+  -x .git/\* \
+  autobuild.sh \
+  README.md \
+  MIUI\*.zip
 echo "> Done! You can find the module zip file in the current directory - '$(pwd)/$zip_name.zip'"
 

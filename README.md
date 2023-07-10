@@ -35,11 +35,7 @@ This module forked from the original and modified, this module intended for CN v
 ### For Ubuntu, Debian, and other Linux distributions
 - Clone the repo using git.
 ```sh
-git clone --depth=1 https://github.com/Mods-Center/Miui_Launcher_Mod
-```
-- Navigate to the **Miui_Launcher_Mod** folder.
-```sh
-cd Miui_Launcher_Mod
+git clone --depth=1 https://github.com/lululoid/Miui_Launcher_Mod_MIUI_14_FOG_CN.git && cd Miui_Launcher_Mod_MIUI_14_FOG_CN
 ```
 - Run autobuild.sh.
 ```sh
@@ -53,20 +49,14 @@ git pull
 > The required zip package install command is in the script itself. However, if you encounter any errors, you need install **zip** utility manually.
 
 ### For Termux
-- Open Termux, copy & paste this command:
+- Open Termux, copy & paste this command before command above:
 ```sh
 termux-setup-storage
 ```
 and give Termux storage access. If you get this warning "It appears that directory '~/storage' already exists. This script is going to rebuild its structure from scratch, wiping all dangling files. The actual storage content is not going to be deleted" then just do press "y". It won't do any harm to your device.
 - Now copy & paste this command:
 ```sh
-pkg upgrade || true
-pkg install -y git
-rm -rf Miui_Launcher_Mod
-git clone --depth=1 https://github.com/Mods-Center/Miui_Launcher_Mod
-cd Miui_Launcher_Mod
-bash autobuild.sh
-mv MIUI\ Launcher\ MOD* /sdcard
+mv *MIUI14*.zip /sdcard
 echo "Your magisk module is available in Internal Storage"
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.

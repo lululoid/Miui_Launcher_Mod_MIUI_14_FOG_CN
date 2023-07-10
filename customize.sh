@@ -1,4 +1,3 @@
-REPLACE="$launcher_dir"
 SKIPUNZIP=1
 SKIPMOUNT=false
 android=$(getprop ro.build.version.release)
@@ -44,6 +43,8 @@ install_files() {
 		mkdir -p "$MODPATH$launcher_dir"
 	done
 
+	REPLACE="$launcher_dir"
+
 	if [ -z "$launcher_dir" ]; then
 		_ui_print "> Installing on non MIUI system?"
 
@@ -63,16 +64,17 @@ install_files() {
 		fi
 	fi
 
-	ui_print "> Choose your MIUI Version:"
+	ui_print "> Uninstalling launcher updates.."
+	pm uninstall-system-updates com.miui.home 1>/dev/null && 
+    ui_print " Launcher updates uninstalled"
+	_ui_print "> Choose your MIUI Version:"
 	ui_print "  Vol+ = Android 13 or MIUI 14 CN"
 	ui_print "  Vol- = MIUI 14 or < A13"
 
 	# installation
 	if chooseport; then
-		ui_print "> Uninstalling launcher updates.."
-		pm uninstall-system-updates com.miui.home 1>/dev/null && ui_print " Launcher updates uninstalled"
-
 		installation=$(pm install "$MODPATH"/files/launcher/MiuiHome.apk)
+
 		log_it "installation=$(pm install "$MODPATH"/files/launcher/MiuiHome.apk)"
 		log_it "$(ls "$MODPATH"/files/launcher/)"
 
