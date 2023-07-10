@@ -82,6 +82,6 @@ git pull
 
 | Download Mods | Total |
 | --- | --- |
-| GitHub Releases | ![GitHub all releases](https://img.shields.io/github/downloads/Mods-Center/Miui_Launcher_Mod/total?logo=GitHub&style=for-the-badge&color=blue) |
+| Owner release | ![GitHub all releases](https://img.shields.io/github/downloads/Mods-Center/Miui_Launcher_Mod/total?logo=GitHub&style=for-the-badge&color=blue) |
 
 
