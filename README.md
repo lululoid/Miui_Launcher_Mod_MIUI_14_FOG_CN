@@ -13,6 +13,7 @@ This module forked from the original and modified, this module intended for CN v
 - Patch v3
 - New UI interface.
 - Added several new modifications.
+- Based on CN launcher.
 - Fixed all bugs noticed in the previous update.
 
 ### Notes
