@@ -116,12 +116,16 @@ set_permissions() {
 
 cleanup() {
 	rm -rf $MODPATH/files 2>/dev/null
-	rm -f $MODPATH/install.sh 2>/dev/null
 	ui_print "> Deleting package cache files"
-	rm -rf /data/resource-cache/*
-	rm -rf /data/system/package_cache/*
-	rm -rf /cache/*
-	rm -rf /data/dalvik-cache/*
+	# check if this is an update or first install
+	{
+		[ ! -d $NVBASE/modules/miui_launcher_mod ] && {
+			rm -rf /data/resource-cache/*
+			rm -rf /data/system/package_cache/*
+			rm -rf /cache/*
+			rm -rf /data/dalvik-cache/*
+		}
+	} || ui_print "> Cache cleanup skipped, no need to reboot."
 	ui_print "> Deleting old module (if it is installed)"
 	touch /data/adb/modules/miui_launcher_mod/remove
 }
@@ -132,7 +136,6 @@ set_permissions
 install_files
 set_monet
 sleep 1
-ui_print "> Cleaning up"
 cleanup
 sleep 1
 ui_print "> Removing any MIUI Launcher folder to avoid issues"
