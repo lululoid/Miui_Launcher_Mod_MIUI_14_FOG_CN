@@ -2,6 +2,8 @@
 
 ![Picsart_22-12-14_07-47-34-971](https://telegra.ph/file/479d8c1d24c2b5f2c7168.png)
 
+I forked this to remove some inconvinient in Kashi's script.
+
 MIUI Launcher App modified by [Kashi](https://t.me/kakashi1v1) with added features and UI changes.
 This module forked from the original and modified, this module intended for CN version but also probably work for other mentioned in owner repo too, tell me if something goes wrong.
 
@@ -10,6 +12,8 @@ This module forked from the original and modified, this module intended for CN v
 - MIUI 13-14 based ROMs with Android 11 or higher.
 
 ### Changelog
+- fix unresponsive volume in installation
+- Skip reboot if the module installed before, because reboot is a hassle
 - Patch v3
 - New UI interface.
 - Added several new modifications.
@@ -24,7 +28,7 @@ This module forked from the original and modified, this module intended for CN v
 - For issues or questions, you can send a message to the [Telegram](https://t.me/amogus_discussion) group.
 
 ### Download
-- Download --> [MIUI-Launcher-MOD-V3-MIUI14-CN-support.zip](https://github.com/lululoid/Miui_Launcher_Mod_MIUI_14_FOG_CN/raw/main/MIUI-Launcher-MOD-V3-MIUI14-CN-support.zip)
+- Download --> [MIUI launcher mod](https://github.com/lululoid/Miui_Launcher_Mod_MIUI_14_FOG_CN/releases/download/v3.1-CN/MIUI-Launcher-MOD-3.1.zip)
 
 ### Instructions
 - Download the zip file and flash it in Magisk.
