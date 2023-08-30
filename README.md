@@ -28,7 +28,7 @@ This module forked from the original and modified, this module intended for CN v
 - For issues or questions, you can send a message to the [Telegram](https://t.me/amogus_discussion) group.
 
 ### Download
-- Download --> [MIUI launcher mod](https://github.com/lululoid/Miui_Launcher_Mod_MIUI_14_FOG_CN/releases/download/v3.1-CN/MIUI-Launcher-MOD-3.1.zip)
+- Download --> [MIUI launcher mod](https://github.com/lululoid/Miui_Launcher_Mod_MIUI_14_FOG_CN/releases)
 
 ### Instructions
 - Download the zip file and flash it in Magisk.
@@ -88,5 +88,3 @@ git pull
 | Download Mods | Total |
 | --- | --- |
 | Owner release | ![GitHub all releases](https://img.shields.io/github/downloads/Mods-Center/Miui_Launcher_Mod/total?logo=GitHub&style=for-the-badge&color=blue) |
-
-
